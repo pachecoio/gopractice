@@ -16,8 +16,8 @@ func main() {
 	// fmt.Println("n=1 :", exercices.FibonacciNumber(1))
 	// fmt.Println("n=2 :", exercices.FibonacciNumber(2))
 	// fmt.Println("n=100 :", exercices.FibonacciNumber(100))
-	// fmt.Println("Exercice 4 :")
+	// fmt.Println("Exercice 5 :")
 	// exercices.StartWebServer()
-	fmt.Println("Exercice 5 :")
+	fmt.Println("Exercice 6 :")
 	exercices.StartAPI()
 }
