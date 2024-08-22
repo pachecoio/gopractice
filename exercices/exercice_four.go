@@ -1,21 +1,31 @@
 package exercices
 
-var memo = make(map[int]int)
+import (
+	"sync"
+)
+
+func fibonacci(n int) []int {
+	fib := make([]int, n)
+	fib[0] = 0
+	fib[1] = 1
+	for i := 2; i < n; i++ {
+		fib[i] = fib[i-1] + fib[i-2]
+	}
+	return fib
+}
 
 func FibonacciMemoized(n int) int {
+	var wg sync.WaitGroup
 
-	if val, ok := memo[n]; ok {
-		return val
-	}
-	if n == 0 {
-		return 0
-	}
-	if n < 2 {
-		return 1
-	}
+	wg.Add(1)
+	var fibonacciSequence []int
+	go func() {
+		fibonacciSequence = fibonacci(n)
+		wg.Done()
+	}()
 
-	memo[n] = FibonacciMemoized(n-1) + FibonacciMemoized(n-2)
+	wg.Wait()
 
-	return memo[n]
+	return fibonacciSequence[n-1] + fibonacciSequence[n-2]
 
 }
