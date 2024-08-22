@@ -11,9 +11,7 @@ Create a PR with your solution to the questions above. Once you are done, you ca
 
 Happy coding!
 
-
 ## Toy coding challenges to learn Go
-
 
 1. Write a function that takes a string and returns a slice of its words.
 
@@ -36,7 +34,6 @@ Happy coding!
    > Note: You can keep all the data in memory, no need to persist it to a database.
    > You can use `net/http` to create a web server, or any other HTTP library of your choice (gin is a very good one).
 
-
 ### Hints
 
 > Hint: You can use the `net/http` package to create a web server.
@@ -44,4 +41,3 @@ Happy coding!
 > You can use the `sync` package to implement memoization.
 > You can use the `time` package to get the current time.
 > You can use the `fmt` package to print to the console.
-
